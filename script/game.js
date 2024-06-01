@@ -36,7 +36,7 @@ window.addEventListener("load", isReady());
 // adding event Listeners to the buttons
 chosenButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const pickSound = new Audio("../sound/mouse click.mp3");
+    const pickSound = new Audio("./sound/mouse click.mp3");
     pickSound.play();
     const userID = button.getAttribute("data-id");
     const computerID = computerChoice();
@@ -65,11 +65,11 @@ function openPickedContainer(user, computer) {
         </div>
         <div class="picked">
             <div class="user-container">
-                <img src="/images/${user}.svg" alt="${user}image">
+                <img src="./images/${user}.svg" alt="${user}image">
                 <p>User Pick</p>
             </div>
             <div class="computer-container">
-                <img src="/images/${computer}.svg" alt="${computer}image">
+                <img src="./images/${computer}.svg" alt="${computer}image">
                 <p>Computer Pick</p>
             </div>
         </div>
@@ -78,13 +78,13 @@ function openPickedContainer(user, computer) {
   chosenContainer.classList.add("toggle");
 
   if (winner === "user win") {
-    const userWin = new Audio("../sound/winner.mp3");
+    const userWin = new Audio("./sound/winner.mp3");
     userWin.play();
   } else if (winner === "computer win") {
-    const computerWin = new Audio("../sound/failed.mp3");
+    const computerWin = new Audio("./sound/failed.mp3");
     computerWin.play();
   } else {
-    const draw = new Audio("../sound/draw.mp3");
+    const draw = new Audio("./sound/draw.mp3");
     draw.play();
   }
 
@@ -128,8 +128,8 @@ const results = document.querySelector(".result"); //result selector
 let myTime;
 
 function checkingVictory() {
-  const victorySound = new Audio("../sound/victory.mp3");
-  const defeatSound = new Audio("../sound/defeat.mp3");
+  const victorySound = new Audio("./sound/victory.mp3");
+  const defeatSound = new Audio("./sound/defeat.mp3");
   let result = "";
   if (scoreCards[0] >= 5) {
     result = "victory";
