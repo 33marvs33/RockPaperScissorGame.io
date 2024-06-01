@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to Style CSS -->
+
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header>
+        <div class="title">
+          <p class="name">Rock Paper Scissor</p>
+        </div>
+
+        <div class="score-container">
+          <p>User : <span class="user-score">0</span></p>
+          <p>Computer : <span class="computer-score">0</span></p>
+        </div>
+      </header>
+
+      <!-- end of Header -->
+      <main>
+        <div class="chosen-container">
+          <div class="image-container img-1">
+            <img
+              class="button rock"
+              src="/images/rock.svg"
+              alt="Rock Image"
+              data-id="rock"
+            />
+          </div>
+          <div class="image-container img-2">
+            <img
+              class="button paper"
+              src="/images/paper.svg"
+              alt="Paper Image"
+              data-id="paper"
+            />
+          </div>
+          <div class="image-container img-3">
+            <img
+              class="button scissor"
+              src="/images/scissor.svg"
+              alt="Scissor Image"
+              data-id="scissor"
+            />
+          </div>
+        </div>
+      </main>
+
+      <div class="continue-container">
+        <div class="circle">
+          <p class="result"></p>
+
+          <p class="timer">10</p>
+          <div class="buttons">
+            <button class="btn-continue">continue</button>
+            <button class="btn-stop">stop</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="play-container">
+        <p>play now</p>
+        <button>
+          <img class="play" src="/images/Play Button.svg" alt="" />
+        </button>
+      </div>
+    </div>
+    <!-- chosen container -->
+
+    <div class="picked-container"></div>
+
+    <!-- overlay -->
+    <div class="overlay"></div>
+
+    <script type="module" src="/script/game.js"></script>
+  </body>
+</html>
